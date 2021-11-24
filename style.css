@@ -1,0 +1,195 @@
+html, body{
+	margin:0;
+	padding: 0;
+}
+
+/******************* Formatacion cubo **************************/
+ #container{
+ 	border:2px solid black;
+ 	background-color: black;
+ 	width: 100%;
+ 	height:1200px;
+ }
+ /**** Cubo ****/
+ .perspective-box{
+ 	
+ 	width: 100px;
+ 	height: 100px;
+ 	margin:15px 100px;
+ 	transform-style: preserve-3d;
+ 	transform-origin:top left;
+ 	transform:perspective(10cm)rotateY(45deg) rotateX(-45deg);
+ 	animation-name:cubo2;
+ 	
+ 	animation-duration:40s;
+ 	animation-iteration-count: infinite;
+ 	
+  	
+ }
+ .cara1{
+ 	width: 100px;
+ 	height: 100px;
+ 	background-color:#FE642E;
+ 	transform-origin: top;
+ 	transform:rotateX(-90deg);
+ 	opacity: 0.7;
+ }
+ .cara2{
+ 	width: 100px;
+ 	height: 100px;
+ 	background-color:#74DF00;
+ 	margin-top: -100px;
+ 	transform-origin: left;
+ 	transform:rotateY(90deg);
+ 	opacity: 0.7;
+ 	
+
+
+ }
+ .cara3{
+ 	width: 100px;
+ 	height: 100px;
+ 	background-color:#0000FF;
+ 	margin-top: -100px;
+ 	transform-origin:right;
+ 	transform:rotateY(-90deg);
+ 	opacity: 0.7;
+ }
+ #de{
+ 	
+ 	transform-style: preserve-3d;
+ 	transform-origin: top;
+ 	transform:rotateX(-90deg) ;
+
+
+ }
+ .cara4{
+ 	width: 100px;
+ 	height: 100px;
+ 	background-color:#FF00FF;
+ 	opacity: 0.7;
+
+ }
+ .cara5{
+ 	width: 100px;
+ 	height: 100px;
+ 	background-color:#BDBDBD;
+ 	transform-origin: top;
+ 	transform:rotateX(-90deg);
+ 	opacity: 0.7;
+ 	
+ }
+ .cara6{
+ 	width: 100px;
+ 	height: 100px;
+ 	background-color:#FFFF00;
+ 	margin-top: -300px;
+ 	opacity: 0.7;
+ }
+ #move{
+ 	
+ 	margin-top: 200px;
+ 	margin-left: 100px;
+ 	transform-style: preserve-3d;
+
+ 	width: 200px;
+ 	height:200px;
+ 	animation-name: trans2;
+ 	animation-duration: 20s;
+ 	transform-origin: center center;
+ 	animation-iteration-count: infinite;
+ }
+ #zoom{
+ 	
+ 	transform-style: preserve-3d;
+
+ 	width: 200px;
+ 	height:200px;
+ 	animation-name: zoom;
+ 	animation-duration: 20s;
+ 	transform-origin: center center;
+ 	animation-iteration-count: infinite;
+
+ }
+/****** Animation cubo*******/
+
+@keyframes cubo2{
+	from{
+		transform:perspective(0cm)rotateY(0deg) rotateX(30deg) rotateZ(45deg);
+		
+		
+	}
+	to{
+		
+		transform:perspective(20cm)rotateY(360deg) rotateX(30deg) rotateZ(45deg);
+		
+	}
+}
+@keyframes trans2{
+	0%{
+		transform: translate3d(0px,0px,0px);
+		
+
+		
+		}
+	25%{
+		
+		
+		transform: translate3d(500px,-150px,0px);
+		
+
+
+	}
+
+	50%{
+		transform: translate3d(1100px,50px,0px);
+		
+		
+
+	}
+	75%{
+		transform: translate3d(500px,200px,0px);
+		
+		
+
+	}
+	100%{
+		transform: translate3d(0px,0px,0px);
+	
+		
+
+	}
+}
+@keyframes zoom{
+	0%{
+		
+		transform: scale(1);
+
+		
+		}
+	25%{
+		
+		
+		
+		transform: scale(0.2);
+
+
+	}
+
+	50%{
+		
+		transform: scale(1);
+		
+
+	}
+	75%{
+		
+		transform: scale(2.5);
+		
+
+	}
+	100%{
+		
+		transform: scale(1);
+}
+
